@@ -5,6 +5,7 @@ import { BotRoutingModule } from './bot-routing.module';
 import { AllBotsComponent } from './all-bots/all-bots.component';
 import { CreateNewBotPopupComponent } from './create-new-bot-popup/create-new-bot-popup.component';
 import { CreateWorkspacePopupComponent } from './create-workspace-popup/create-workspace-popup.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CreateWorkspacePopupComponent } from './create-workspace-popup/create-w
   ],
   imports: [
     CommonModule,
-    BotRoutingModule
+    BotRoutingModule,
+    SharedModule
   ]
 })
 export class BotModule { }
