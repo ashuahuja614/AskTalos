@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-new-bot-popup',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateNewBotPopupComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public _dialogRef: MatDialogRef<CreateNewBotPopupComponent>
+  ) { }
 
   ngOnInit(): void {
   }
 
+  public closeDialog(): void {
+    this._dialogRef.close();
+  }
 }

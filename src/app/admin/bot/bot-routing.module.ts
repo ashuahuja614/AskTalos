@@ -4,8 +4,13 @@ import { AllBotsComponent } from './all-bots/all-bots.component';
 
 const routes: Routes = [
   {
-    path: "all",
+    path: "all-bots",
     component: AllBotsComponent
+  },
+  {
+    path: "",
+    redirectTo: "all-bots",
+    pathMatch: 'full'
   }
 ];
 
