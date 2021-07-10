@@ -1,1 +1,20 @@
-//use all scss partial imports here
+// VARIABLES
+@import "./partials/variables";
+
+// BASE
+@import "./partials/base";
+
+// TYPOGRAPHY
+@import "./partials/typography";
+
+// MIXINS
+@import "./partials/mixins";
+
+// LAYOUT
+@import "./partials/layout";
+
+// components
+@import "./partials/components/admin-sidebar";
+@import "./partials/components/admin-header";
+@import "./partials/components/bot-sidebar";
+@import "./partials/components/boat-listing";
