@@ -9,6 +9,10 @@
 
   @include scrollbar(5px);
 
+  @media screen and (max-width: 1600px) {
+    padding: 24px 34px;
+  }
+
   &-heading {
     font-size: 20px;
     color: $c-gray;
@@ -17,6 +21,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 18px;
+    }
   }
 
   &-menu {
@@ -48,6 +56,10 @@
         border-color: $c-secondary;
         background-color: rgba($c-secondary, 0.05);
         color: $c-secondary;
+      }
+
+      @media screen and (max-width: 1600px) {
+        font-size: 16px;
       }
     }
   }

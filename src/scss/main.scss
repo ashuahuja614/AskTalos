@@ -10,6 +10,12 @@
 // MIXINS
 @import "./partials/mixins";
 
+// MATERIAL OVERRIDES
+@import "./partials/material-popup-override";
+
+// THEME
+@import "./partials/theme";
+
 // LAYOUT
 @import "./partials/layout";
 
@@ -18,3 +24,4 @@
 @import "./partials/components/admin-header";
 @import "./partials/components/bot-sidebar";
 @import "./partials/components/boat-listing";
+@import "./partials/components/create-new-bot-popup";
