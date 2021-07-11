@@ -15,6 +15,10 @@ export class CreateNewBotPopupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * @name closeDialog
+   * @description close popup
+   */
   public closeDialog(): void {
     this._dialogRef.close();
   }
