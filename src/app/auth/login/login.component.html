@@ -1,0 +1,60 @@
+<section class="onboarding-container">
+  <div class="onboarding-form-section">
+    <form class="onboarding-form-section__form">
+      <img
+        src="../../../assets/images/logo-full-colored.png"
+        alt="askTolas logo"
+      />
+
+      <h1 class="onboarding-form-section__form-heading">Login</h1>
+
+      <p class="onboarding-form-section__form-suggestion">
+        Automate your business with AskTalos
+      </p>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="Enter your email" type="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Enter password</mat-label>
+        <input matInput placeholder="Enter password" type="password" />
+      </mat-form-field>
+
+      <div>
+        <mat-checkbox>Remember me</mat-checkbox>
+        <a href="" class="link">Forgot Password?</a>
+      </div>
+
+      <button mat-button class="bttn bttn-secondary">Sign In</button>
+      <p>
+        Don't have an account ? <a href="" class="link">Create an account</a>
+      </p>
+    </form>
+  </div>
+  <div class="onboarding-vector-section">
+    <div class="onboarding-vector-section__carousel">
+      <owl-carousel-o [options]="onboardingCarouselOptions">
+        <ng-template carouselSlide>
+          <div>
+            <img src="../../../assets/images/onboarding-vector.png" alt="" />
+            <p>Empower your business with AskTalos</p>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div>
+            <img src="../../../assets/images/onboarding-vector.png" alt="" />
+            <p>Empower your business with AskTalos</p>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div>
+            <img src="../../../assets/images/onboarding-vector.png" alt="" />
+            <p>Empower your business with AskTalos</p>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+// MATERIAL FORM FIELDS OVERRIDE
+.mat-form-field {
+  width: 100%;
+}
+
+// APP FORM FIELDS
+.app-form-label {
+  font-size: 14px;
+  color: $c-gray;
+  margin-bottom: 15px;
+}
+
+// BUTTONS
+.bttn {
+  font-size: 14px;
+  padding: 15px 17px !important;
+  border-radius: 5px !important;
+  border: 1px solid transparent !important;
+  line-height: 1 !important;
+  min-height: 48px !important;
+}
+
+.bttn-secondary {
+  background-color: $c-secondary;
+  color: $c-white;
+}
+
+// DROPDOWN MENU
+.mat-menu-content {
+  min-width: 160px;
+
+  .mat-menu-item {
+    display: flex;
+    align-items: center;
+
+    .mat-menu-item__icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+
+// LINK
+.link {
+  color: $c-sky;
+}

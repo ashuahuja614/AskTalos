@@ -1,0 +1,22 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin scrollbar($size) {
+  &::-webkit-scrollbar {
+    width: $size;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: $size;
+    border-radius: 5px;
+    background-color: $c-secondary;
+  }
+}
