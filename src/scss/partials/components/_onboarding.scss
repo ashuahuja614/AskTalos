@@ -1,0 +1,20 @@
+.onboarding-container {
+  display: flex;
+  height: 100vh;
+
+  .onboarding-form-section {
+    width: 55%;
+    @include flex-center;
+  }
+
+  .onboarding-vector-section {
+    width: 45%;
+    background-color: $c-blue;
+    color: $c-white;
+    background-image: url("../../../assets/images/onboarding-dots.png"),
+      url("../../../assets/images/onboarding-dots.png");
+    background-repeat: no-repeat;
+    background-position: -52px 22px, calc(100% + 48px) calc(100% + 35px);
+    background-size: 150px;
+  }
+}
