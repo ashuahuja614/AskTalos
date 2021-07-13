@@ -1,23 +1,26 @@
 // VARIABLES
-@import "./partials/variables";
+@import "./partials/base/variables";
 
 // BASE
-@import "./partials/base";
+@import "./partials/base/base";
+
+// UTILITIES
+@import "./partials/utils";
 
 // TYPOGRAPHY
-@import "./partials/typography";
+@import "./partials/base/typography";
 
 // MIXINS
 @import "./partials/mixins";
 
 // MATERIAL OVERRIDES
-@import "./partials/material-popup-override";
+@import "./partials/theme/material-popup-override";
 
 // THEME
-@import "./partials/theme";
+@import "./partials/theme/theme";
 
 // LAYOUT
-@import "./partials/layout";
+@import "./partials/theme/layout";
 
 // components
 @import "./partials/components/admin-sidebar";
