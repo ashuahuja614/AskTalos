@@ -25,6 +25,10 @@
   color: $c-white;
 }
 
+.bttn-outlined {
+  border: 1px solid rgba($c-gray, 0.2) !important;
+}
+
 // DROPDOWN MENU
 .mat-menu-content {
   min-width: 160px;
@@ -39,8 +43,24 @@
   }
 }
 
-
 // LINK
 .link {
   color: $c-sky;
 }
+
+// CHECKBOXES
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: $c-secondary;
+  border-radius: 5px;
+}
+
+.mat-checkbox-background,
+.mat-checkbox-frame {
+  border-radius: 5px !important;
+}
+
+.mat-checkbox-frame {
+  border: 1px solid rgba($c-gray, 0.4) !important;
+}
+
