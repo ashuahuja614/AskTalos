@@ -8,11 +8,16 @@
           class="onboarding-form-section__logo"
         />
 
-        <h1 class="onboarding-form-section__form-heading">Login</h1>
+        <h1 class="onboarding-form-section__form-heading">Sign Up</h1>
 
         <p class="onboarding-form-section__form-suggestion">
           Automate your business with AskTalos
         </p>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Username" type="email" />
+        </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Enter your email</mat-label>
@@ -24,55 +29,37 @@
           <input matInput placeholder="Enter password" type="password" />
         </mat-form-field>
 
-        <div class="onboarding-form-section__form-remember">
-          <mat-checkbox>Remember me</mat-checkbox>
-          <a href="" class="link">Forgot Password?</a>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm password</mat-label>
+          <input matInput placeholder="Confirm password" type="password" />
+        </mat-form-field>
+
+        <div class="d-flex">
+          <mat-form-field appearance="outline" class="mr-1">
+            <mat-label>Choose Company</mat-label>
+            <mat-select>
+              <mat-option value="default">Choose Company</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="ml-1">
+            <mat-label>Employee Count</mat-label>
+            <mat-select>
+              <mat-option value="default">Employee Count</mat-option>
+            </mat-select>
+          </mat-form-field>
         </div>
 
         <button mat-button class="bttn bttn-secondary">Sign In</button>
         <p class="onboarding-form-section__form-next-action">
-          Don't have an account ?
+          Already a member ?
           <a
-            [routerLink]="['','auth', 'sign-up']"
+            [routerLink]="['','auth', 'login']"
             class="link"
-            >Create an account</a
+            >Login to account</a
           >
         </p>
       </form>
-
-      <p class="onboarding-form-section__or-seprator">Or</p>
-
-      <div class="onboarding-form-section__buttons">
-        <button mat-button class="bttn bttn-outlined">
-          <span class="onboarding-form-section__button">
-            <img
-              src="../../../assets/icons/icon_google.svg"
-              alt="icon google"
-            />
-            <span>Log in with Google</span>
-          </span>
-        </button>
-
-        <button mat-button class="bttn bttn-outlined">
-          <span class="onboarding-form-section__button">
-            <img
-              src="../../../assets/icons/icon_facebook.svg"
-              alt="icon facebook"
-            />
-            <span>Log in with Facebook</span>
-          </span>
-        </button>
-
-        <button mat-button class="bttn bttn-outlined">
-          <span class="onboarding-form-section__button">
-            <img
-              src="../../../assets/icons/icon_linkedin.svg"
-              alt="icon linkedin"
-            />
-            <span>Log in with Linkedin</span>
-          </span>
-        </button>
-      </div>
     </div>
   </div>
   <div class="onboarding-vector-section">

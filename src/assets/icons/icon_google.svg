@@ -1,18 +1,5 @@
+
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-  <defs>
-    <filter id="Rectangle_421" x="-15" y="-12" width="54" height="54" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <clipPath id="clip-path">
-      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_421)">
-        <rect id="Rectangle_421-2" data-name="Rectangle 421" width="24" height="24" rx="12" transform="translate(0 0)" fill="#fff"/>
-      </g>
-    </clipPath>
-  </defs>
   <g id="Mask_Group_17" data-name="Mask Group 17" transform="translate(0 0)" clip-path="url(#clip-path)">
     <g id="_0201d58bbb764b6" data-name="0201d58bbb764b6" transform="translate(3 2.816)">
       <path id="Path_1794" data-name="Path 1794" d="M312.9,250.549a7.87,7.87,0,0,0-.194-1.877h-8.622v3.408h5.061a4.488,4.488,0,0,1-1.878,2.98l-.017.114,2.726,2.112.189.019a8.979,8.979,0,0,0,2.735-6.755" transform="translate(-294.898 -241.161)" fill="#4285f4"/>
