@@ -10,16 +10,22 @@
     &__inner {
       max-width: 500px;
       margin: auto;
-      padding: 60px 15px;
+      padding: 40px 15px;
     }
 
     &__logo {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+
       @media screen and (max-width: 1600px) {
         max-width: 150px;
       }
     }
 
     &__form {
+      text-align: center;
+
       &-heading {
         font-size: 24px;
         color: $c-gray;
@@ -113,21 +119,21 @@
 
   .onboarding-vector-section {
     width: 45%;
-    background-color: $c-blue;
-    color: $c-white;
-    background-image: url("../../../assets/images/onboarding-dots.png"),
-      url("../../../assets/images/onboarding-dots.png");
+    background-color: rgba($c-secondary, 0.1);
+    // color: $c-white;
+    // background-image: url("../../../assets/images/onboarding-dots.png"),
+    //   url("../../../assets/images/onboarding-dots.png");
     background-repeat: no-repeat;
-    background-position: -52px 22px, calc(100% + 48px) calc(100% + 35px);
-    background-size: 150px;
+    // background-position: -52px 22px, calc(100% + 48px) calc(100% + 35px);
+    // background-size: 150px;
     text-align: center;
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 1600px) {
-      background-position: -32px 10px, calc(100% + 32px) calc(100% + 18px);
-      background-size: 100px;
-    }
+    // @media screen and (max-width: 1600px) {
+    //   background-position: -32px 10px, calc(100% + 32px) calc(100% + 18px);
+    //   background-size: 100px;
+    // }
 
     &__carousel {
       width: 100%;
@@ -143,14 +149,17 @@
       }
 
       &-text {
-        font-size: 30px;
-        color: #ffffff;
-        max-width: 370px;
+        max-width: 470px;
         margin: 80px auto 0;
 
+        h2 {
+          font-size: 20px;
+          margin-bottom: 1.2em;
+        }
+
         @media screen and (max-width: 1600px) {
-          font-size: 24px;
-          max-width: 320px;
+          font-size: 16px;
+          // max-width: 320px;
           margin-top: 50px;
         }
       }
@@ -164,25 +173,20 @@
 
         .owl-dot {
           span {
-            width: 18px;
-            height: 18px;
+            width: 66px;
+            height: 4px;
             margin: 5px 4px;
-            background-color: #fff;
             transition: 0.3s all ease-in-out;
+            background-color: rgba($c-secondary, 0.2);
 
             @media screen and (max-width: 1600px) {
-              width: 14px;
-              height: 14px;
+              width: 50px;
             }
           }
 
           &.active {
             span {
-              width: 36px;
-
-              @media screen and (max-width: 1600px) {
-                width: 30px;
-              }
+              background-color: $c-secondary;
             }
           }
         }
