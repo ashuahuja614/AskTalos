@@ -128,7 +128,7 @@
           font-size: 14px;
           padding: 15px;
           background: $c-light2-gray;
-          max-width: 60%;
+          max-width: 70%;
           margin-left: 8px;
           margin-right: 8px;
           border-radius: 20px;
@@ -161,6 +161,11 @@
             border-bottom-left-radius: 0;
           }
 
+          .chatbot_bot-messages-msg-content-video-wrapper {
+            width: 250px;
+            // height: 150px;
+          }
+
           .chatbot__bot-messages-msg-time {
             left: 0;
           }
@@ -171,7 +176,7 @@
 
           .chatbot__bot-messages-msg-content {
             border-bottom-right-radius: 0;
-            background-color: #F9DFCC;
+            background-color: #f9dfcc;
           }
 
           .chatbot__bot-messages-msg-time {

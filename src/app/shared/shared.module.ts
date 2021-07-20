@@ -6,13 +6,16 @@ import { MaterialModule } from '../material/material.module';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
+
 
 
 @NgModule({
   declarations: [
     AdminHeaderComponent,
     AdminSidebarComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    VideoPlayerComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +26,8 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     MaterialModule,
     AdminHeaderComponent,
     AdminSidebarComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    VideoPlayerComponent
   ]
 })
 export class SharedModule { }
