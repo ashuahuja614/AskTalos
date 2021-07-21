@@ -1,6 +1,6 @@
 <!-- 'open' class will open chat bot adn hide welcome message -->
-<div class="chatbot open">
-  <div class="chatbot__toggle">
+<div class="chatbot" [ngClass]="{'open': chatWindowOpen}">
+  <div class="chatbot__toggle" (click)="onChatWindowOpen()">
     <img
       src="../../../assets/images/bot.png"
       alt="bot"
@@ -43,7 +43,8 @@
     </svg>
   </div>
 
-  <div class="chatbot__welcome">
+
+  <div class="chatbot__welcome" *ngIf="!chatWindowOpen">
     <p class="chatbot__welcome-msg">
       <img
         src="../../../assets/icons/icons_waving_hand.svg"
@@ -54,6 +55,7 @@
     </p>
   </div>
 
+  <ng-container *ngIf="chatWindowOpen">
   <div class="chatbot__bot">
     <div class="chatbot__bot-header">
       <!-- 'online' class will add green color badge on user pic -->
@@ -73,7 +75,7 @@
     </div>
 
     <!-- 'chatbot__bot-body' will be hide when 'chatbot__bot-feedback' shown -->
-    <div class="chatbot__bot-body">
+    <div class="chatbot__bot-body" *ngIf="!chatEnd">
       <div class="chatbot__bot-messages">
         <!-- msg--recieve class for left side messages which user recieving -->
         <div class="chatbot__bot-messages-msg msg--recieve">
@@ -110,7 +112,7 @@
     </div>
 
     <!-- chat feedback screen -->
-    <div class="chatbot__bot-feedback">
+    <div class="chatbot__bot-feedback" *ngIf="chatEnd">
       <div class="chatbot__bot-feedback-header">
         <h4 class="chatbot__bot-feedback-heading">
           Please rate this conversation
@@ -143,7 +145,7 @@
         </button>
       </div>
       <div class="chatbot__bot-feedback-footer">
-        <a href="" class="chatbot__bot-feedback-footer-link"
+        <a (click)="onStartChat()" class="chatbot__bot-feedback-footer-link pointer"
           >Start chat again</a
         >
       </div>
@@ -166,7 +168,7 @@
       </ul> -->
 
       <!-- 'chatbot__bot-footer-input-group' will be hide when 'chatbot__bot-feedback' shown -->
-      <div class="chatbot__bot-footer-input-group">
+      <div class="chatbot__bot-footer-input-group" *ngIf="!chatEnd">
         <input
           type="text"
           class="chatbot__bot-footer-input"
@@ -188,7 +190,7 @@
             />
           </span>
 
-          <button class="chatbot__bot-footer-send">
+          <button class="chatbot__bot-footer-send" (click)="endChat()">
             <img
               src="../../../assets/icons/icon_send_msg.svg"
               alt="icon send message"
@@ -210,4 +212,6 @@
       </div>
     </div>
   </div>
+ </ng-container>
+
 </div>

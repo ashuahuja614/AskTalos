@@ -157,7 +157,7 @@
       max-height: 35vh;
       overflow-x: auto;
       position: relative;
-      display: none;
+      // display: none;
 
       @include scrollbar(5px);
 
@@ -367,7 +367,7 @@
       &-input-group {
         position: relative;
         margin: 0 7px;
-        display: none;
+        // display: none;
       }
 
       &-input {
@@ -469,7 +469,7 @@
     }
 
     .chatbot__welcome {
-      display: none;
+      // display: none;
     }
   }
 }

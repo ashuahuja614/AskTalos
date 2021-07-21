@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ChatbotComponent implements OnInit {
 
   public videoConfig: any;
+  public chatEnd: boolean = false;
+  public chatWindowOpen: boolean = false;
 
   constructor() { }
 
@@ -20,6 +22,27 @@ export class ChatbotComponent implements OnInit {
       poster: "./../../../assets/images/product-detail.jpg",
       playToggle: false
     };
+  }
+
+  /**
+   * @name onChatWindowOpen
+   */
+   public onChatWindowOpen(){
+    this.chatWindowOpen = !this.chatWindowOpen;
+  }
+
+  /**
+   * @name endChat
+   */
+  public endChat(){
+    this.chatEnd = true;
+  }
+
+  /**
+   * @name onStartChat
+   */
+  public onStartChat(){
+    this.chatEnd = false;
   }
 
 }
