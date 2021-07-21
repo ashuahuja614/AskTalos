@@ -1,3 +1,4 @@
+<!-- 'open' class will open chat bot adn hide welcome message -->
 <div class="chatbot open">
   <div class="chatbot__toggle">
     <img
@@ -55,6 +56,7 @@
 
   <div class="chatbot__bot">
     <div class="chatbot__bot-header">
+      <!-- 'online' class will add green color badge on user pic -->
       <div class="chatbot__bot-header-user online">
         <img src="../../../assets/images/bot_admin_pic.jpg" alt="bot admin" />
       </div>
@@ -63,12 +65,17 @@
         <p class="chatbot__bot-header-heading-tagline">Hi, there!</p>
       </div>
       <div class="chatbot__bot-header-icon">
-        <img src="../../../assets/icons/icon_chatbot_down_arrow.svg" alt="chatbot icon" />
+        <img
+          src="../../../assets/icons/icon_chatbot_down_arrow.svg"
+          alt="chatbot icon"
+        />
       </div>
     </div>
 
+    <!-- 'chatbot__bot-body' will be hide when 'chatbot__bot-feedback' shown -->
     <div class="chatbot__bot-body">
       <div class="chatbot__bot-messages">
+        <!-- msg--recieve class for left side messages which user recieving -->
         <div class="chatbot__bot-messages-msg msg--recieve">
           <div class="chatbot__bot-messages-msg-user">
             <img src="../../../assets/images/bot_admin_pic.jpg" alt="" />
@@ -79,6 +86,7 @@
           </div>
         </div>
 
+        <!-- msg--send class for right side messages which user sending -->
         <div class="chatbot__bot-messages-msg msg--send">
           <div class="chatbot__bot-messages-msg-user">
             <img src="../../../assets/images/icon_dp_paceholder.png" alt="" />
@@ -94,15 +102,70 @@
             <img src="../../../assets/images/bot_admin_pic.jpg" alt="" />
           </div>
           <div class="chatbot__bot-messages-msg-content content--media">
-            <app-video-player [options]=videoConfig></app-video-player>
+            <app-video-player [options]="videoConfig"></app-video-player>
             <span class="chatbot__bot-messages-msg-time">Few min ago</span>
           </div>
         </div>
+      </div>
+    </div>
 
+    <!-- chat feedback screen -->
+    <div class="chatbot__bot-feedback">
+      <div class="chatbot__bot-feedback-header">
+        <h4 class="chatbot__bot-feedback-heading">
+          Please rate this conversation
+        </h4>
+        <p class="chatbot__bot-feedback-description">
+          Thank you for chatting with us, please spend few minutes to rate our
+          service
+        </p>
+      </div>
+      <div class="chatbot__bot-feedback-body">
+        <button class="chatbot__bot-feedback-btn">
+          <img src="../../../assets/icons/icon_great.svg" alt="icon great" />
+          <span>Great</span>
+        </button>
+        <button class="chatbot__bot-feedback-btn">
+          <img src="../../../assets/icons/icon_v_good.svg" alt="icon Very Good" />
+          <span>Very Good</span>
+        </button>
+        <button class="chatbot__bot-feedback-btn">
+          <img src="../../../assets/icons/icon_good.svg" alt="icon Good" />
+          <span>Good</span>
+        </button>
+        <button class="chatbot__bot-feedback-btn">
+          <img src="../../../assets/icons/icon_bad.svg" alt="icon Bad" />
+          <span>Bad</span>
+        </button>
+        <button class="chatbot__bot-feedback-btn">
+          <img src="../../../assets/icons/icon_v_bad.svg" alt="icon Very Bad" />
+          <span>Very Bad</span>
+        </button>
+      </div>
+      <div class="chatbot__bot-feedback-footer">
+        <a href="" class="chatbot__bot-feedback-footer-link"
+          >Start chat again</a
+        >
       </div>
     </div>
 
     <div class="chatbot__bot-footer">
+      <!-- suggestion are here... -->
+      <!-- <ul class="chatbot__bot-suggetions">
+        <li>
+          <button class="chatbot__bot-suggetions-btn">Course Details</button>
+        </li>
+        <li>
+          <button class="chatbot__bot-suggetions-btn">
+            Contact Sales Team
+          </button>
+        </li>
+        <li>
+          <button class="chatbot__bot-suggetions-btn">Contact Support</button>
+        </li>
+      </ul> -->
+
+      <!-- 'chatbot__bot-footer-input-group' will be hide when 'chatbot__bot-feedback' shown -->
       <div class="chatbot__bot-footer-input-group">
         <input
           type="text"
