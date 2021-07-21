@@ -7,6 +7,7 @@
 @mixin scrollbar($size) {
   &::-webkit-scrollbar {
     width: $size;
+    height: $size;
     background-color: transparent;
   }
 
@@ -16,6 +17,7 @@
 
   &::-webkit-scrollbar-thumb {
     width: $size;
+    height: $size;
     border-radius: 5px;
     background-color: $c-secondary;
   }

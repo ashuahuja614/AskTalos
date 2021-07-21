@@ -5,12 +5,17 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
+
 
 
 @NgModule({
   declarations: [
     AdminHeaderComponent,
-    AdminSidebarComponent
+    AdminSidebarComponent,
+    ChatbotComponent,
+    VideoPlayerComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +25,9 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
   exports: [
     MaterialModule,
     AdminHeaderComponent,
-    AdminSidebarComponent
+    AdminSidebarComponent,
+    ChatbotComponent,
+    VideoPlayerComponent
   ]
 })
 export class SharedModule { }
