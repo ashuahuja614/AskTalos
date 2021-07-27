@@ -1,0 +1,46 @@
+.live-chat {
+  display: flex;
+  height: calc(100vh - 74px);
+
+  &__sidebar {
+    width: 26%;
+    flex-basis: 26%;
+    background-color: $c-white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+
+    &-tabs {
+      &-btns {
+        margin: 7px 15px;
+        padding: 4px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        background-color: $c-light-gray;
+      }
+
+      &-btn {
+        width: 50%;
+        color: rgba($c-gray, 0.4);
+        font-size: 16px;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: inherit;
+        background-color: transparent;
+
+        .app-badge {
+            margin-left: 8px;
+        }
+
+        &.active {
+            background-color: $c-white;
+            color: $c-sky;
+        }
+      }
+    }
+  }
+
+  &__chat {
+    flex-grow: 1;
+  }
+}

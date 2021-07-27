@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
 
-  @include scrollbar(5px);
+  @include scrollbar(0px);
 
   @media screen and (max-width: 1600px) {
     padding: 20px;
