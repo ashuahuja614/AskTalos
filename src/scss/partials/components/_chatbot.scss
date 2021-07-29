@@ -64,6 +64,7 @@
     right: 0;
     border-radius: 20px;
     box-shadow: 0 3px 10px rgba($c-black, 0.16);
+    animation: botWelcomeMsg 0.3s ease;
 
     @media screen and (max-width: 1600px) {
       width: 400px;
@@ -142,6 +143,7 @@
 
       &-icon {
         margin-left: auto;
+        cursor: pointer;
 
         img {
           @media screen and (max-width: 1600px) {
@@ -153,11 +155,11 @@
 
     &-body {
       padding: 20px;
-      height: 300px;
-      max-height: 35vh;
+      min-height: 45vh;
+      height: 100%;
+      max-height: 100%;
       overflow-x: auto;
       position: relative;
-      // display: none;
 
       @include scrollbar(5px);
 
@@ -230,7 +232,6 @@
           font-size: 10px;
           position: absolute;
           top: calc(100% + 8px);
-          left: 0;
         }
 
         &.msg--recieve {
@@ -333,6 +334,7 @@
         display: inline-flex;
         align-items: center;
         margin: 8px 4px;
+        transition: 0.3s all ease-in-out;
 
         @media screen and (max-width: 1600px) {
           font-size: 12px;
@@ -344,6 +346,11 @@
 
         span {
           margin-top: 2px;
+        }
+
+        &:hover {
+          background-color: $c-light2-gray;
+          box-shadow: 0 4px 6px rgba($c-black, 0.16);
         }
       }
 
@@ -455,6 +462,37 @@
         }
       }
     }
+
+    &-loader {
+      list-style: none;
+      margin-bottom: 0;
+      display: flex;
+      padding: 4px 0;
+      margin-top: -8px;
+
+      li {
+        width: 10px;
+        height: 10px;
+        background-color: $c-secondary;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+
+        &:nth-last-child(1) {
+          animation: loadingMessage 0.5s 0.1s linear infinite;
+        }
+
+        &:nth-last-child(2) {
+          animation: loadingMessage 0.5s 0.2s linear infinite;
+        }
+
+        &:nth-last-child(3) {
+          animation: loadingMessage 0.5s 0.3s linear infinite;
+        }
+      }
+    }
   }
 
   &.open {
@@ -466,10 +504,6 @@
       &-icon {
         opacity: 1;
       }
-    }
-
-    .chatbot__welcome {
-      // display: none;
     }
   }
 }
@@ -483,5 +517,17 @@
   100% {
     opacity: 1;
     transform: translate(0px, 0px);
+  }
+}
+
+@keyframes loadingMessage {
+  0% {
+    transform: translate(0, -0);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

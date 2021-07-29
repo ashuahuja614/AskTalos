@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="admin-header__right">
-    <div class="admin-header__user">
+    <div class="admin-header__user" mat-button [matMenuTriggerFor]="menu">
       <img
         src="../../../../assets/images/user_pic.png"
         alt="user"
@@ -36,5 +36,18 @@
 
       <img src="../../../../assets/icons/icon_angel_down.svg" alt="icon" />
     </div>
+
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item>
+        <img
+          src="../../../../assets/icons/icon_edit.svg"
+          alt="icon plus"
+          class="mat-menu-item__icon"
+        />
+        <span>Edit</span>
+      </button>
+    </mat-menu>
+
+
   </div>
 </header>
