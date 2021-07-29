@@ -1,6 +1,6 @@
 <!-- 'open' class will open chat bot adn hide welcome message -->
-<div class="chatbot" [ngClass]="{'open': chatWindowOpen}">
-  <div class="chatbot__toggle" (click)="onChatWindowOpen()">
+<div class="chatbot" [ngClass]="{ open: chatWindowOpen }">
+  <div class="chatbot__toggle" (click)="onChatWindowChange(!chatWindowOpen)">
     <img
       src="../../../assets/images/bot.png"
       alt="bot"
@@ -43,7 +43,6 @@
     </svg>
   </div>
 
-
   <div class="chatbot__welcome" *ngIf="!chatWindowOpen">
     <p class="chatbot__welcome-msg">
       <img
@@ -56,104 +55,127 @@
   </div>
 
   <ng-container *ngIf="chatWindowOpen">
-  <div class="chatbot__bot">
-    <div class="chatbot__bot-header">
-      <!-- 'online' class will add green color badge on user pic -->
-      <div class="chatbot__bot-header-user online">
-        <img src="../../../assets/images/bot_admin_pic.jpg" alt="bot admin" />
-      </div>
-      <div class="chatbot__bot-header-heading">
-        <h4 class="chatbot__bot-header-heading-one">InsideAIML</h4>
-        <p class="chatbot__bot-header-heading-tagline">Hi, there!</p>
-      </div>
-      <div class="chatbot__bot-header-icon">
-        <img
-          src="../../../assets/icons/icon_chatbot_down_arrow.svg"
-          alt="chatbot icon"
-        />
-      </div>
-    </div>
-
-    <!-- 'chatbot__bot-body' will be hide when 'chatbot__bot-feedback' shown -->
-    <div class="chatbot__bot-body" *ngIf="!chatEnd">
-      <div class="chatbot__bot-messages">
-        <!-- msg--recieve class for left side messages which user recieving -->
-        <div class="chatbot__bot-messages-msg msg--recieve">
-          <div class="chatbot__bot-messages-msg-user">
-            <img src="../../../assets/images/bot_admin_pic.jpg" alt="" />
-          </div>
-          <div class="chatbot__bot-messages-msg-content content--text">
-            <p>Hi! I'm a bot. How may I help You?</p>
-            <span class="chatbot__bot-messages-msg-time">Few min ago</span>
-          </div>
+    <div class="chatbot__bot">
+      <div class="chatbot__bot-header">
+        <!-- 'online' class will add green color badge on user pic -->
+        <div class="chatbot__bot-header-user online">
+          <img src="../../../assets/images/bot_admin_pic.jpg" alt="bot admin" />
         </div>
-
-        <!-- msg--send class for right side messages which user sending -->
-        <div class="chatbot__bot-messages-msg msg--send">
-          <div class="chatbot__bot-messages-msg-user">
-            <img src="../../../assets/images/icon_dp_paceholder.png" alt="" />
-          </div>
-          <div class="chatbot__bot-messages-msg-content content--text">
-            <p>I would like the information about Data Science Course.</p>
-            <span class="chatbot__bot-messages-msg-time">13:00</span>
-          </div>
+        <div class="chatbot__bot-header-heading">
+          <h4 class="chatbot__bot-header-heading-one">InsideAIML</h4>
+          <p class="chatbot__bot-header-heading-tagline">Hi, there!</p>
         </div>
-
-        <div class="chatbot__bot-messages-msg msg--recieve">
-          <div class="chatbot__bot-messages-msg-user">
-            <img src="../../../assets/images/bot_admin_pic.jpg" alt="" />
-          </div>
-          <div class="chatbot__bot-messages-msg-content content--media">
-            <app-video-player [options]="videoConfig"></app-video-player>
-            <span class="chatbot__bot-messages-msg-time">Few min ago</span>
-          </div>
+        <div class="chatbot__bot-header-icon" (click)="onChatWindowChange(false)">
+          <img
+            src="../../../assets/icons/icon_chatbot_down_arrow.svg"
+            alt="chatbot icon"
+          />
         </div>
       </div>
-    </div>
 
-    <!-- chat feedback screen -->
-    <div class="chatbot__bot-feedback" *ngIf="chatEnd">
-      <div class="chatbot__bot-feedback-header">
-        <h4 class="chatbot__bot-feedback-heading">
-          Please rate this conversation
-        </h4>
-        <p class="chatbot__bot-feedback-description">
-          Thank you for chatting with us, please spend few minutes to rate our
-          service
-        </p>
-      </div>
-      <div class="chatbot__bot-feedback-body">
-        <button class="chatbot__bot-feedback-btn">
-          <img src="../../../assets/icons/icon_great.svg" alt="icon great" />
-          <span>Great</span>
-        </button>
-        <button class="chatbot__bot-feedback-btn">
-          <img src="../../../assets/icons/icon_v_good.svg" alt="icon Very Good" />
-          <span>Very Good</span>
-        </button>
-        <button class="chatbot__bot-feedback-btn">
-          <img src="../../../assets/icons/icon_good.svg" alt="icon Good" />
-          <span>Good</span>
-        </button>
-        <button class="chatbot__bot-feedback-btn">
-          <img src="../../../assets/icons/icon_bad.svg" alt="icon Bad" />
-          <span>Bad</span>
-        </button>
-        <button class="chatbot__bot-feedback-btn">
-          <img src="../../../assets/icons/icon_v_bad.svg" alt="icon Very Bad" />
-          <span>Very Bad</span>
-        </button>
-      </div>
-      <div class="chatbot__bot-feedback-footer">
-        <a (click)="onStartChat()" class="chatbot__bot-feedback-footer-link pointer"
-          >Start chat again</a
-        >
-      </div>
-    </div>
+      <!-- 'chatbot__bot-body' will be hide when 'chatbot__bot-feedback' shown -->
+      <div class="chatbot__bot-body" *ngIf="!chatEnd">
+        <div class="chatbot__bot-messages">
+          <!-- msg--recieve class for left side messages which user recieving -->
+          <div class="chatbot__bot-messages-msg msg--recieve">
+            <div class="chatbot__bot-messages-msg-user">
+              <img src="../../../assets/images/bot_admin_pic.jpg" alt="" />
+            </div>
+            <div class="chatbot__bot-messages-msg-content content--text">
+              <p>Hi! I'm a bot. How may I help You?</p>
+              <span class="chatbot__bot-messages-msg-time">Few min ago</span>
+            </div>
+          </div>
 
-    <div class="chatbot__bot-footer">
-      <!-- suggestion are here... -->
-      <!-- <ul class="chatbot__bot-suggetions">
+          <!-- msg--send class for right side messages which user sending -->
+          <div class="chatbot__bot-messages-msg msg--send">
+            <div class="chatbot__bot-messages-msg-user">
+              <img src="../../../assets/images/icon_dp_paceholder.png" alt="" />
+            </div>
+            <div class="chatbot__bot-messages-msg-content content--text">
+              <p>I would like the information about Data Science Course.</p>
+              <span class="chatbot__bot-messages-msg-time">13:00</span>
+            </div>
+          </div>
+
+          <div class="chatbot__bot-messages-msg msg--recieve">
+            <div class="chatbot__bot-messages-msg-user">
+              <img src="../../../assets/images/bot_admin_pic.jpg" alt="" />
+            </div>
+            <!-- 'content--media' class for media files (Video, image) -->
+            <div class="chatbot__bot-messages-msg-content content--media">
+              <app-video-player [options]="videoConfig"></app-video-player>
+              <span class="chatbot__bot-messages-msg-time">Few min ago</span>
+            </div>
+          </div>
+
+          <!-- Loader message -->
+          <div class="chatbot__bot-messages-msg msg--recieve">
+            <div class="chatbot__bot-messages-msg-user">
+              <img src="../../../assets/images/bot_admin_pic.jpg" alt="" />
+            </div>
+            <div class="chatbot__bot-messages-msg-content content--text">
+              <ul class="chatbot__bot-loader">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- chat feedback screen -->
+      <div class="chatbot__bot-feedback" *ngIf="chatEnd">
+        <div class="chatbot__bot-feedback-header">
+          <h4 class="chatbot__bot-feedback-heading">
+            Please rate this conversation
+          </h4>
+          <p class="chatbot__bot-feedback-description">
+            Thank you for chatting with us, please spend few minutes to rate our
+            service
+          </p>
+        </div>
+        <div class="chatbot__bot-feedback-body">
+          <button class="chatbot__bot-feedback-btn">
+            <img src="../../../assets/icons/icon_great.svg" alt="icon great" />
+            <span>Great</span>
+          </button>
+          <button class="chatbot__bot-feedback-btn">
+            <img
+              src="../../../assets/icons/icon_v_good.svg"
+              alt="icon Very Good"
+            />
+            <span>Very Good</span>
+          </button>
+          <button class="chatbot__bot-feedback-btn">
+            <img src="../../../assets/icons/icon_good.svg" alt="icon Good" />
+            <span>Good</span>
+          </button>
+          <button class="chatbot__bot-feedback-btn">
+            <img src="../../../assets/icons/icon_bad.svg" alt="icon Bad" />
+            <span>Bad</span>
+          </button>
+          <button class="chatbot__bot-feedback-btn">
+            <img
+              src="../../../assets/icons/icon_v_bad.svg"
+              alt="icon Very Bad"
+            />
+            <span>Very Bad</span>
+          </button>
+        </div>
+        <div class="chatbot__bot-feedback-footer">
+          <a
+            (click)="onStartChat()"
+            class="chatbot__bot-feedback-footer-link pointer"
+            >Start chat again</a
+          >
+        </div>
+      </div>
+
+      <div class="chatbot__bot-footer">
+        <!-- suggestion are here... -->
+        <!-- <ul class="chatbot__bot-suggetions">
         <li>
           <button class="chatbot__bot-suggetions-btn">Course Details</button>
         </li>
@@ -167,51 +189,50 @@
         </li>
       </ul> -->
 
-      <!-- 'chatbot__bot-footer-input-group' will be hide when 'chatbot__bot-feedback' shown -->
-      <div class="chatbot__bot-footer-input-group" *ngIf="!chatEnd">
-        <input
-          type="text"
-          class="chatbot__bot-footer-input"
-          placeholder="Type your message here ..."
-        />
+        <!-- 'chatbot__bot-footer-input-group' will be hide when 'chatbot__bot-feedback' shown -->
+        <div class="chatbot__bot-footer-input-group" *ngIf="!chatEnd">
+          <input
+            type="text"
+            class="chatbot__bot-footer-input"
+            placeholder="Type your message here ..."
+          />
 
-        <div class="chatbot__bot-footer-input-append">
-          <span class="chatbot__bot-footer-emojies">
+          <div class="chatbot__bot-footer-input-append">
+            <span class="chatbot__bot-footer-emojies">
+              <img
+                src="../../../assets/icons/icon_smiley.svg"
+                alt="icon smiley"
+              />
+            </span>
+
+            <span class="chatbot__bot-footer-attachment">
+              <img
+                src="../../../assets/icons/icon_attachment.svg"
+                alt="icon attachment"
+              />
+            </span>
+
+            <button class="chatbot__bot-footer-send" (click)="endChat()">
+              <img
+                src="../../../assets/icons/icon_send_msg.svg"
+                alt="icon send message"
+              />
+
+              <span>Send</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="chatbot__bot-footer-powered-by">
+          <p class="chatbot__bot-footer-powered-by-text">
+            <span>Powered by</span>
             <img
-              src="../../../assets/icons/icon_smiley.svg"
-              alt="icon smiley"
+              src="../../../assets/images/logo-full-colored.png"
+              alt="AskTalos Logo"
             />
-          </span>
-
-          <span class="chatbot__bot-footer-attachment">
-            <img
-              src="../../../assets/icons/icon_attachment.svg"
-              alt="icon attachment"
-            />
-          </span>
-
-          <button class="chatbot__bot-footer-send" (click)="endChat()">
-            <img
-              src="../../../assets/icons/icon_send_msg.svg"
-              alt="icon send message"
-            />
-
-            <span>Send</span>
-          </button>
+          </p>
         </div>
       </div>
-
-      <div class="chatbot__bot-footer-powered-by">
-        <p class="chatbot__bot-footer-powered-by-text">
-          <span>Powered by</span>
-          <img
-            src="../../../assets/images/logo-full-colored.png"
-            alt="AskTalos Logo"
-          />
-        </p>
-      </div>
     </div>
-  </div>
- </ng-container>
-
+  </ng-container>
 </div>

@@ -25,10 +25,10 @@ export class ChatbotComponent implements OnInit {
   }
 
   /**
-   * @name onChatWindowOpen
+   * @name onChatWindowChange
    */
-   public onChatWindowOpen(){
-    this.chatWindowOpen = !this.chatWindowOpen;
+   public onChatWindowChange(value: boolean){
+    this.chatWindowOpen = value;
   }
 
   /**
