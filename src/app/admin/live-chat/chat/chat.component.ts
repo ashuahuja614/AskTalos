@@ -15,12 +15,20 @@ export class ChatComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public onTabChange(){
-    this.isWaitingWindowActive = !this.isWaitingWindowActive;
+  public onTabChange(tabValue: string){
+    if(tabValue == 'chat'){
+      this.isWaitingWindowActive = false;
+    } else {
+      this.isWaitingWindowActive = true;
+    }
   }
 
-  public onUserDescriptionChange(){
-    this.isUserDescriptionActive = !this.isUserDescriptionActive;
+  public onUserDescriptionChange(tabValue: string){
+    if(tabValue == 'quick'){
+      this.isUserDescriptionActive = false;
+    } else {
+      this.isUserDescriptionActive = true;
+    }
   }
 
 }
