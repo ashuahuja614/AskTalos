@@ -1,0 +1,259 @@
+<h3 class="section-settings__heading">
+  <span>Users Settings</span>
+  <span class="section-settings__heading-help">
+    <svg
+      id="Iconly_Light_Danger_Circle"
+      data-name="Iconly/Light/Danger Circle"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <g
+        id="Danger_Circle"
+        data-name="Danger Circle"
+        transform="translate(2 2)"
+      >
+        <path
+          id="Stroke_1"
+          data-name="Stroke 1"
+          d="M9.25,0A9.25,9.25,0,1,1,0,9.25,9.25,9.25,0,0,1,9.25,0Z"
+          transform="translate(0.75 0.75)"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="10"
+          stroke-width="1.5"
+        />
+        <path
+          id="Stroke_3"
+          data-name="Stroke 3"
+          d="M.5,0V4.419"
+          transform="translate(9.495 6.204)"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="10"
+          stroke-width="1.5"
+        />
+        <path
+          id="Stroke_5"
+          data-name="Stroke 5"
+          d="M.5.5H.5"
+          transform="translate(9.5 13.296)"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="10"
+          stroke-width="2"
+        />
+      </g>
+    </svg>
+    <span>Help</span>
+  </span>
+</h3>
+
+<button class="bttn bttn-secondary bttn-with-icon">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <g id="Group_1601" data-name="Group 1601" transform="translate(-1622 -196)">
+      <rect
+        id="Rectangle_489"
+        data-name="Rectangle 489"
+        width="24"
+        height="24"
+        transform="translate(1622 196)"
+        fill="none"
+      />
+      <path
+        id="Path_2396"
+        data-name="Path 2396"
+        d="M6430,2934.762v13.772"
+        transform="translate(-4796 -2734.077)"
+        fill="none"
+        stroke="#fff"
+        stroke-linecap="round"
+        stroke-width="1.5"
+      />
+      <path
+        id="Path_2397"
+        data-name="Path 2397"
+        d="M0,0V13.772"
+        transform="translate(1640.886 207.571) rotate(90)"
+        fill="none"
+        stroke="#fff"
+        stroke-linecap="round"
+        stroke-width="1.5"
+      />
+    </g>
+  </svg>
+
+  <span>Add New User</span>
+</button>
+
+<div class="table">
+  <table class="section-settings__table">
+    <thead>
+      <tr>
+        <th>
+          <span class="app-checkbox">
+            <input type="checkbox" id="allUSersSelect" />
+            <label for="allUSersSelect"></label>
+          </span>
+        </th>
+        <th>User Id</th>
+        <th>Email Id</th>
+        <th>Privilege</th>
+        <th>Department</th>
+        <th>Team</th>
+        <th class="text-right">
+          <button
+            mat-icon-button
+            [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu"
+          >
+            <svg
+              id="Component_80_1"
+              data-name="Component 80 – 1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g
+                id="Group_985"
+                data-name="Group 985"
+                transform="translate(24) rotate(90)"
+              >
+                <rect
+                  id="Rectangle_347"
+                  data-name="Rectangle 347"
+                  width="24"
+                  height="24"
+                  fill="none"
+                />
+                <g
+                  id="Group_972"
+                  data-name="Group 972"
+                  transform="translate(4 10)"
+                >
+                  <circle
+                    id="Ellipse_225"
+                    data-name="Ellipse 225"
+                    cx="2"
+                    cy="2"
+                    r="2"
+                  />
+                  <circle
+                    id="Ellipse_226"
+                    data-name="Ellipse 226"
+                    cx="2"
+                    cy="2"
+                    r="2"
+                    transform="translate(12)"
+                  />
+                  <circle
+                    id="Ellipse_227"
+                    data-name="Ellipse 227"
+                    cx="2"
+                    cy="2"
+                    r="2"
+                    transform="translate(6)"
+                  />
+                </g>
+              </g>
+            </svg>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+                class="mat-menu-item__icon"
+              />
+              <span>Delete Users</span>
+            </button>
+          </mat-menu>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="app-checkbox">
+            <input type="checkbox" id="user-1" />
+            <label for="user-1"></label>
+          </span>
+        </td>
+        <td>Francesca Metts</td>
+        <td>francescametts@gmail.com</td>
+        <td>Agent</td>
+        <td>IT Support</td>
+        <td>Starteam</td>
+        <td class="text-right">
+            <img
+                src="../../../../assets/icons/icon_edit.svg"
+                alt="icon edit"
+            />
+            <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+            />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="app-checkbox">
+            <input type="checkbox" id="user-2" />
+            <label for="user-2"></label>
+          </span>
+        </td>
+        <td>Francesca Metts</td>
+        <td>francescametts@gmail.com</td>
+        <td>Agent</td>
+        <td>IT Support</td>
+        <td>Starteam</td>
+        <td class="text-right">
+            <img
+                src="../../../../assets/icons/icon_edit.svg"
+                alt="icon edit"
+            />
+            <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+            />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="app-checkbox">
+            <input type="checkbox" id="user-3" />
+            <label for="user-3"></label>
+          </span>
+        </td>
+        <td>Francesca Metts</td>
+        <td>francescametts@gmail.com</td>
+        <td>Agent</td>
+        <td>IT Support</td>
+        <td>Starteam</td>
+        <td class="text-right">
+            <img
+                src="../../../../assets/icons/icon_edit.svg"
+                alt="icon edit"
+            />
+            <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+            />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

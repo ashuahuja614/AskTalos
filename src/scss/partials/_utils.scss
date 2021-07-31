@@ -1,12 +1,39 @@
 // UTILITIES
 .d-flex {
-    display: flex;
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+}
+
+.inline-flex-center {
+  display: inline-flex;
+}
+
+.flex-center,
+.inline-flex-center {
+  justify-content: center;
+  align-items: center;
 }
 
 .mr-1 {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .ml-1 {
-    margin-left: 1rem;
+  margin-left: 1rem;
+}
+
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: center;
 }

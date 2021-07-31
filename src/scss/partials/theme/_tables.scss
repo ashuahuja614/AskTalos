@@ -1,0 +1,46 @@
+.table {
+    width: 100%;
+    max-width: 100vw;
+    overflow: auto;
+
+    @include scrollbar(5px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        background-color: $c-secondary-light;
+        text-align: left;
+        font-size: 16px;
+        color: $c-black;
+
+        &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+
+    th,
+    td {
+        padding: 12px 15px;
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid rgba($c-gray, 0.2);
+        }
+
+        td {
+            font-size: 14px;
+        }
+    }
+
+
+}
