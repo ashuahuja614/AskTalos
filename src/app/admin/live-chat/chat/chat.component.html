@@ -2,10 +2,10 @@
   <div class="live-chat__sidebar sidebar--left">
     <div class="live-chat__sidebar-tabs">
       <div class="live-chat__sidebar-tabs-btns">
-        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': !isWaitingWindowActive}" (click)="onTabChange()">
+        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': !isWaitingWindowActive}" (click)="onTabChange('chat')">
           <span>Chats</span>
         </button>
-        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': isWaitingWindowActive}" (click)="onTabChange()">
+        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': isWaitingWindowActive}" (click)="onTabChange('waiting')">
           <span>Waiting</span>
           <span class="app-badge badge--sky">5</span>
         </button>
@@ -239,10 +239,10 @@
   <div class="live-chat__sidebar sidebar--right">
     <div class="live-chat__sidebar-tabs">
       <div class="live-chat__sidebar-tabs-btns">
-        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': !isUserDescriptionActive}" (click)="onUserDescriptionChange()">
+        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': !isUserDescriptionActive}" (click)="onUserDescriptionChange('quick')">
           <span>Quick Responses</span>
         </button>
-        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': isUserDescriptionActive}" (click)="onUserDescriptionChange()">
+        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': isUserDescriptionActive}" (click)="onUserDescriptionChange('user')">
           <span>User Description</span>
         </button>
       </div>
