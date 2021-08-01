@@ -7,7 +7,7 @@
   line-height: 1 !important;
   min-height: 48px !important;
   cursor: pointer;
-
+  transition: 0.2s all ease-in-out;
 
   &.bttn-with-icon {
     display: flex;
@@ -43,13 +43,36 @@
 }
 
 .bttn-google {
-  background-color: $c-google;
+  background-color: transparent;
+  color: $c-google;
+
+  &:hover {
+    background-color: $c-google;
+    color: $c-white;
+  }
 }
 
 .bttn-facebook {
-  background-color: $c-facebook;
+  background-color: transparent;
+  color: $c-facebook;
+
+  &:hover {
+    background-color: $c-facebook;
+    color: $c-white;
+  }
 }
 
 .bttn-linkedin {
-  background-color: $c-linedin;
+  background-color: transparent;
+  color: $c-linedin;
+
+  &:hover {
+    background-color: $c-linedin;
+    color: $c-white;
+  }
+}
+
+.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,
+.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
+  opacity: 0.1;
 }
