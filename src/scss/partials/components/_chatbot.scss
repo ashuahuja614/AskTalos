@@ -9,9 +9,10 @@
     height: 80px;
     cursor: pointer;
     border-radius: 50%;
-    box-shadow: 0 3px 6px rgba($c-black, 0.16);
+    box-shadow: 0px 4px 24px rgba($c-secondary, 0.4);
     background-color: $c-secondary;
     position: relative;
+    transition: all 0.2s ease-in-out;
 
     @media screen and (max-width: 1600px) {
       width: 60px;
@@ -20,6 +21,7 @@
 
     &-logo {
       max-width: 100%;
+      transition: all 0.2s ease-in-out;
     }
 
     &-icon {
@@ -30,6 +32,29 @@
       opacity: 0;
       width: 33%;
       height: 33%;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &-edit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      .chatbot__toggle-edit {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .chatbot__toggle-logo {
+        opacity: 0;
+      }
     }
   }
 
@@ -497,7 +522,8 @@
 
   &.open {
     .chatbot__toggle {
-      &-logo {
+      &-logo,
+      &-edit {
         opacity: 0;
       }
 
