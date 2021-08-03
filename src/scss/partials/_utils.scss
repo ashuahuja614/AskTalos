@@ -1,8 +1,5 @@
 // UTILITIES
-.d-flex {
-  display: flex;
-}
-
+.d-flex,
 .flex-center {
   display: flex;
 }
@@ -10,7 +7,9 @@
 .inline-flex-center {
   display: inline-flex;
 }
-
+.flex-space-between{
+  justify-content: space-between;
+}
 .flex-center,
 .inline-flex-center {
   justify-content: center;
@@ -36,4 +35,8 @@
 
 .text-left {
     text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
 }
