@@ -5,6 +5,13 @@
         flex-grow: 1;
         padding: 45px;
         background: $c-white;
+<<<<<<< HEAD
+=======
+
+        .table {
+            max-height: calc(100vh - 320px);
+        }
+>>>>>>> adcff0a537a121c0a6330e40af9c6df56ad503c4
     }
 
     &__heading {
