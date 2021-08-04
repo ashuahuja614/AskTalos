@@ -86,6 +86,7 @@
             width:80px;
             color:rgba($c-gray, 0.4);
         }
+
         .mat-form-field-wrapper{
             padding-bottom: 0px;
            
@@ -109,6 +110,11 @@
             position: relative;
             top: 1px;
         }
+        &.team-selectoption{
+            h4{
+                width: 60px;
+            }
+        }
      }
     }
     &__table {
@@ -119,8 +125,16 @@
                 padding-right: 0;
             }
         }
-       
+        .mat-button-wrapper svg {
+            fill:$c-secondary;
+        }
     }
+    &__team-table{
+        td{
+            color:$c-gray-dark;
+        }
+    }
+    
     &__user{
         align-items: center;
         
@@ -133,17 +147,50 @@
     &__user-detail{
         padding: 0px 15px;     
     }
+    &__user-placeholder{
+        display: flex;
+        width: 40px;
+        height:40px;
+        border-radius: 50%;
+        background: $c-tints;
+        color: $c-secondary;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+    }
     &__user-name{
         color: $c-gray;
         font-size: 14px;
     }
+    &__team-uname{
+        color:$c-gray-dark;
+    }
     &__iconedit{
         margin-right: 15px;
     }
-
+    &__team-user{
+        display: flex;
+        &-pic{
+            &:nth-child(2){
+                margin-left: -20px;
+            }
+            &:nth-child(3){
+                margin-left: -20px;
+            }
+            &:nth-child(4){
+                margin-left: -20px;
+            }
+            img{
+                width: 40px;
+                border-radius: 50%;
+                height: 40px;
+            }
+        }
+    }
     &__pagination{
         .mat-paginator-container{
             justify-content: space-between;
+            padding: 0px 20px;
             .mat-paginator-page-size-label{
                 color: $c-gray-dark;
                 font-size: 14px;

@@ -11,3 +11,13 @@ body {
 a {
   text-decoration: none;
 }
+input::-webkit-input-placeholder {
+  color: rgba($c-gray, 0.4);
+}
+
+input:-ms-input-placeholder { 
+  color: rgba($c-gray, 0.4);
+}
+  input::placeholder {
+  color: rgba($c-gray, 0.4);
+}
