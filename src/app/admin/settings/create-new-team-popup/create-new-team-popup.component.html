@@ -1,0 +1,45 @@
+<div class="modal create-new-settings-popup">
+  <form>
+    <div class="modal-header">
+      <a (click)="closeDialog()" class="modal-close">
+        <img src="../../../../assets/icons/icon_cross.svg" alt="icon cross" />
+      </a>
+    </div>
+    <div class="mt-modal-content mat-dialog-content add-category-content">
+      <div class="text-center">
+        <img
+          src="../../../../assets/images/create-new-team-vector.png"
+          alt="create new team vector"
+          class="create-new-settings-popup__image"
+        />
+        <h3 class="create-new-settings-popup__heading">
+          Create New Team
+        </h3>
+      </div>
+      <div>
+        <h3 class="app-form-label">Team Title</h3>
+        <mat-form-field appearance="outline">
+          <mat-label>Team Title</mat-label>
+          <input matInput placeholder="Team Title" />
+        </mat-form-field>
+      </div>
+      <div>
+        <h3 class="app-form-label">Select Privilege</h3>
+        <mat-form-field appearance="outline">
+          <mat-label>Select Privilege</mat-label>
+          <mat-select>
+            <mat-option value="default">Admin</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button mat-button (click)="closeDialog()" type="button" class="bttn">
+        Cancel
+      </button>
+      <button mat-button type="submit" class="bttn bttn-secondary">
+        Create Team
+      </button>
+    </div>
+  </form>
+</div>

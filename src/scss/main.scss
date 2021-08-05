@@ -1,6 +1,9 @@
 // VARIABLES
 @import "./partials/base/variables";
 
+// MIXINS
+@import "./partials/mixins";
+
 // BASE
 @import "./partials/base/base";
 
@@ -10,8 +13,6 @@
 // TYPOGRAPHY
 @import "./partials/base/typography";
 
-// MIXINS
-@import "./partials/mixins";
 
 // MATERIAL OVERRIDES
 @import "./partials/theme/material-popup-override";
