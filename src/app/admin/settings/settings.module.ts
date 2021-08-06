@@ -7,6 +7,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { MeetingsComponent } from './meetings/meetings.component';
 import { UsersComponent } from './users/users.component';
 import { SettingsSidebarComponent } from './settings-sidebar/settings-sidebar.component';
+import { CreateNewTeamPopupComponent } from './create-new-team-popup/create-new-team-popup.component';
+import { AddNewUserPopupComponent } from './add-new-user-popup/add-new-user-popup.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { SettingsSidebarComponent } from './settings-sidebar/settings-sidebar.co
     SettingsComponent,
     MeetingsComponent,
     UsersComponent,
-    SettingsSidebarComponent
+    SettingsSidebarComponent,
+    CreateNewTeamPopupComponent,
+    AddNewUserPopupComponent
   ],
   imports: [
     CommonModule,
