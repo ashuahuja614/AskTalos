@@ -12,11 +12,13 @@
         background-color: rgba($c-secondary, 0.1);
         color: $c-secondary;
     }
-    &.badge--agent{
+
+    &.badge--agent {
         background-color: rgba($c-light-blue, 0.1);
         color:$c-light-blue;
     }
-    &.badge--Editor{
+    
+    &.badge--Editor {
         background-color: rgba($c-bage-editor-color, 0.1);
         color: $c-bage-editor-color;
     }

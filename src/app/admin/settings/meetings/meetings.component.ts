@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateNewTeamPopupComponent } from '../create-new-team-popup/create-new-team-popup.component';
+import { SelectUsersPopupComponent } from './../select-users-popup/select-users-popup.component';
 
 @Component({
   selector: 'app-meetings',
@@ -24,4 +25,17 @@ export class MeetingsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {});
   }
+
+    /**
+   * @name onSelectUSers
+   * @description open select users popup
+   */
+     public onSelectUSers() {
+      const dialogRef = this._dialog.open(SelectUsersPopupComponent, {
+        width: '1000px',
+        autoFocus: false,
+      });
+  
+      dialogRef.afterClosed().subscribe((result) => {});
+    }
 }

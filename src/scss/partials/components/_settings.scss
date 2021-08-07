@@ -145,6 +145,16 @@
     .mat-button-wrapper svg {
       fill: $c-secondary;
     }
+
+    &-actions {
+      &-icon {
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
   }
 
   &__team-table {
@@ -188,10 +198,6 @@
     color: $c-gray-dark;
   }
 
-  &__iconedit {
-    margin-right: 15px;
-  }
-
   &__team-user {
     display: flex;
 
@@ -223,10 +229,9 @@
       }
     }
   }
-
 }
 
-// create nwe team, user popup
+// Settings all popups
 .create-new-settings-popup {
   .modal-header {
     border: none !important;
@@ -273,5 +278,29 @@
     .create-new-settings-popup__user-vector {
       display: none;
     }
+  }
+
+  &.popup--select-users {
+    .create-new-settings-popup__heading {
+      display: flex;
+      margin: auto;
+      flex-grow: 1;
+      font-size: 20px;
+    }
+
+    .mat-dialog-content {
+      padding-top: 20px;
+    }
+
+    .table {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 15px;
   }
 }

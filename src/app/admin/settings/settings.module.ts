@@ -9,6 +9,7 @@ import { UsersComponent } from './users/users.component';
 import { SettingsSidebarComponent } from './settings-sidebar/settings-sidebar.component';
 import { CreateNewTeamPopupComponent } from './create-new-team-popup/create-new-team-popup.component';
 import { AddNewUserPopupComponent } from './add-new-user-popup/add-new-user-popup.component';
+import { SelectUsersPopupComponent } from './select-users-popup/select-users-popup.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AddNewUserPopupComponent } from './add-new-user-popup/add-new-user-popu
     UsersComponent,
     SettingsSidebarComponent,
     CreateNewTeamPopupComponent,
-    AddNewUserPopupComponent
+    AddNewUserPopupComponent,
+    SelectUsersPopupComponent
   ],
   imports: [
     CommonModule,
