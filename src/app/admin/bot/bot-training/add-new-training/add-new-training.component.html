@@ -175,33 +175,125 @@
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title>Question</mat-panel-title>
+            <mat-panel-title>Edit Question</mat-panel-title>
           </mat-expansion-panel-header>
-          <p>Question</p>
+          <div>
+            <h3 class="app-form-label">Choose Category</h3>
+            <mat-form-field appearance="outline">
+              <mat-label>Choose Category</mat-label>
+              <mat-select>
+                <mat-option value="default">Welcome Message</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <h3 class="app-form-label">Trigger Question</h3>
+            <mat-slide-toggle class="color--green"></mat-slide-toggle>
+          </div>
+
+          <div>
+            <h3 class="app-form-label">Question</h3>
+            <mat-form-field>
+              <mat-label>Question</mat-label>
+              <input matInput placeholder="How to change user privileges" />
+            </mat-form-field>
+          </div>
         </mat-expansion-panel>
 
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>Similar Questions</mat-panel-title>
           </mat-expansion-panel-header>
-          <p>Similar Questions</p>
+          <button
+            class="flex-center bttn bttn-secondary bttn-with-icon"
+            mat-button
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g
+                id="Group_1601"
+                data-name="Group 1601"
+                transform="translate(-1622 -196)"
+              >
+                <rect
+                  id="Rectangle_489"
+                  data-name="Rectangle 489"
+                  width="24"
+                  height="24"
+                  transform="translate(1622 196)"
+                  fill="none"
+                />
+                <path
+                  id="Path_2396"
+                  data-name="Path 2396"
+                  d="M6430,2934.762v13.772"
+                  transform="translate(-4796 -2734.077)"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  id="Path_2397"
+                  data-name="Path 2397"
+                  d="M0,0V13.772"
+                  transform="translate(1640.886 207.571) rotate(90)"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                />
+              </g>
+            </svg>
+            <span>Add Questions</span>
+          </button>
+
+          <div class="flex-center">
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Enter feature tag and press enter" />
+            </mat-form-field>
+            <button mat-button>
+              <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+              />
+            </button>
+          </div>
         </mat-expansion-panel>
 
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>Bot Response</mat-panel-title>
           </mat-expansion-panel-header>
-          <p>Bot Response</p>
+          <mat-tab-group>
+            <mat-tab label="Text"> Text </mat-tab>
+            <mat-tab label="Cards"> Cards </mat-tab>
+            <mat-tab label="Emoji"> Emoji </mat-tab>
+          </mat-tab-group>
         </mat-expansion-panel>
 
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>Feature</mat-panel-title>
           </mat-expansion-panel-header>
-          <p class="quick-responses-msg">Hi there! How may I help you?</p>
-          <p class="quick-responses-msg">
-            Hi there! Welcome to customer support
-          </p>
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Enter feature tag and press enter" />
+          </mat-form-field>
+          <mat-chip-list aria-label="Fish selection">
+            <mat-chip
+              >Contact Details
+              <mat-icon matChipRemove>cancel</mat-icon></mat-chip
+            >
+            <mat-chip
+              >Contact Details
+              <mat-icon matChipRemove>cancel</mat-icon></mat-chip
+            >
+          </mat-chip-list>
         </mat-expansion-panel>
       </mat-accordion>
     </div>
