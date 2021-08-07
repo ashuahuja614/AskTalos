@@ -31,8 +31,48 @@
     background-color: $c-white;
     border-radius: 5px;
     position: relative;
-    transition: .3s border ease-in-out;
+    transition: 0.3s border ease-in-out;
     cursor: pointer;
+  }
+}
+
+.mat-slide-toggle {
+  height: 20px;
+  line-height: 20px;
+
+  &-bar {
+    height: 20px !important;
+    border-radius: 10px !important;
+    background-color: $c-gray;
+
+    .mat-slide-toggle-thumb-container {
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      transform: translate3d(2px, 0, 0);
+
+      .mat-slide-toggle-thumb {
+        width: 16px;
+        height: 16px;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  &.color--green {
+    &.mat-checked {
+      .mat-slide-toggle-bar {
+        background-color: $c-success;
+      }
+
+      .mat-slide-toggle-thumb {
+        background-color: $c-white !important;
+      }
+    }
+
+    .mat-ripple-element {
+      background-color: $c-success;
+    }
   }
 }
 

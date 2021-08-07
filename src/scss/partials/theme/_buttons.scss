@@ -17,6 +17,11 @@
       margin-right: 8px;
     }
   }
+
+  &.bttn-full-width {
+    max-width: 100% !important;
+    width: 100%;
+  }
 }
 
 .bttn-secondary {
@@ -31,6 +36,11 @@
 
 .bttn-outlined {
   border: 1px solid rgba($c-gray, 0.2) !important;
+}
+
+.bttn-outlined-secondary {
+  border: 1px solid $c-secondary !important;
+  color: $c-secondary;
 }
 
 .bttn-google,

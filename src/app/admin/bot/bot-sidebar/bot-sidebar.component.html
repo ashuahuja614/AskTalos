@@ -5,7 +5,21 @@
 
   <ul class="section-boat__sidebar-menu">
     <li class="section-boat__sidebar-menu-item">
-      <a href="" class="section-boat__sidebar-menu-link active">All Bots</a>
+      <a
+        href=""
+        class="section-boat__sidebar-menu-link"
+        [routerLink]="['', 'admin', 'bot', 'all-bots']"
+        routerLinkActive="active"
+        >All Bots</a
+      >
+    </li>
+    <li class="section-boat__sidebar-menu-item">
+      <a
+        class="section-boat__sidebar-menu-link"
+        [routerLink]="['', 'admin', 'bot', 'training']"
+        routerLinkActive="active"
+        >Training</a
+      >
     </li>
     <li class="section-boat__sidebar-menu-item">
       <a href="" class="section-boat__sidebar-menu-link">Online Bot</a>
