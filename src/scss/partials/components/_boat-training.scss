@@ -58,6 +58,10 @@
     flex: 1;
     padding: 30px;
     background-color: $c-white;
+    max-height: calc(100vh - 72px);
+    overflow: auto;
+
+    @include scrollbar(0px)
   }
 
   &-header {
@@ -108,6 +112,60 @@
       bottom: 100%;
       left: 50%;
       background-color: $c-secondary;
+    }
+  }
+
+  &-accordion {
+    &-block {
+      margin-bottom: 20px;
+    }
+
+    .mat-expansion-panel-header-title {
+      font-size: 20px;
+    }
+
+    .similar-question-input {
+      margin-bottom: 20px;
+      
+      .mat-form-field-wrapper {
+        margin: 0;
+        padding-bottom: 0;
+      }
+
+      button {
+        min-height: 50px;
+      }
+    }
+
+    .add-similar-question-btn {
+      margin-bottom: 20px;
+    }
+
+    .app-form-label {
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    .category-select {
+      max-width: 250px;
+    }
+
+    .new-question {
+      max-width: 500px;
+    }
+
+    .mat-tab-label-active {
+      background-color: rgba($c-secondary, 0.05);
+      border-bottom: 1px solid $c-secondary;
+      color: $c-secondary;
+    }
+
+    .mat-ink-bar {
+      background-color: $c-secondary !important;
+    }
+
+    .mat-tab-body-wrapper {
+      margin-top: 20px;
     }
   }
 }
