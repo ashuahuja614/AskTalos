@@ -177,7 +177,12 @@
           <mat-expansion-panel-header>
             <mat-panel-title>Edit Question</mat-panel-title>
           </mat-expansion-panel-header>
-          <div>
+          <div
+            class="
+              boat-training-section__add-new-question-accordion-block
+              category-select
+            "
+          >
             <h3 class="app-form-label">Choose Category</h3>
             <mat-form-field appearance="outline">
               <mat-label>Choose Category</mat-label>
@@ -187,12 +192,17 @@
             </mat-form-field>
           </div>
 
-          <div>
+          <div class="boat-training-section__add-new-question-accordion-block">
             <h3 class="app-form-label">Trigger Question</h3>
             <mat-slide-toggle class="color--green"></mat-slide-toggle>
           </div>
 
-          <div>
+          <div
+            class="
+              boat-training-section__add-new-question-accordion-block
+              new-question
+            "
+          >
             <h3 class="app-form-label">Question</h3>
             <mat-form-field>
               <mat-label>Question</mat-label>
@@ -206,7 +216,11 @@
             <mat-panel-title>Similar Questions</mat-panel-title>
           </mat-expansion-panel-header>
           <button
-            class="flex-center bttn bttn-secondary bttn-with-icon"
+            class="
+              add-similar-question-btn
+              flex-center
+              bttn bttn-secondary bttn-with-icon
+            "
             mat-button
           >
             <svg
@@ -253,7 +267,55 @@
             <span>Add Questions</span>
           </button>
 
-          <div class="flex-center">
+          <div class="similar-question-input flex-center">
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Enter feature tag and press enter" />
+            </mat-form-field>
+            <button mat-button>
+              <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+              />
+            </button>
+          </div>
+
+          <div class="similar-question-input flex-center">
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Enter feature tag and press enter" />
+            </mat-form-field>
+            <button mat-button>
+              <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+              />
+            </button>
+          </div>
+
+          <div class="similar-question-input flex-center">
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Enter feature tag and press enter" />
+            </mat-form-field>
+            <button mat-button>
+              <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+              />
+            </button>
+          </div>
+
+          <div class="similar-question-input flex-center">
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="Enter feature tag and press enter" />
+            </mat-form-field>
+            <button mat-button>
+              <img
+                src="../../../../assets/icons/icon_delete.svg"
+                alt="icon delete"
+              />
+            </button>
+          </div>
+
+          <div class="similar-question-input flex-center">
             <mat-form-field appearance="outline">
               <input matInput placeholder="Enter feature tag and press enter" />
             </mat-form-field>
