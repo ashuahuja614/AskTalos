@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// import { QuillModule } from 'ngx-quill'
+
 import { BotRoutingModule } from './bot-routing.module';
 import { AllBotsComponent } from './all-bots/all-bots.component';
 import { CreateNewBotPopupComponent } from './create-new-bot-popup/create-new-bot-popup.component';
@@ -12,7 +14,6 @@ import { AddNewTrainingComponent } from './bot-training/add-new-training/add-new
 import { BotComponent } from './bot/bot.component';
 import { BotFlowChartComponent } from './bot-flow-chart/bot-flow-chart.component';
 import { CreateChildIntentPopupComponent } from './create-child-intent-popup/create-child-intent-popup.component';
-
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CreateChildIntentPopupComponent } from './create-child-intent-popup/cre
   imports: [
     CommonModule,
     BotRoutingModule,
-    SharedModule
+    SharedModule,
+    // QuillModule.forRoot()
   ]
 })
 export class BotModule { }

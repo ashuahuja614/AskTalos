@@ -194,7 +194,7 @@
 
           <div class="boat-training-section__add-new-question-accordion-block">
             <h3 class="app-form-label">Trigger Question</h3>
-            <mat-slide-toggle class="color--green"></mat-slide-toggle>
+            <mat-slide-toggle class="color--primary"></mat-slide-toggle>
           </div>
 
           <div
@@ -269,7 +269,8 @@
 
           <div class="similar-question-input flex-center">
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Enter feature tag and press enter" />
+              <mat-label>Question</mat-label>
+              <input matInput placeholder="How to change user privileges" />
             </mat-form-field>
             <button mat-button>
               <img
@@ -281,7 +282,8 @@
 
           <div class="similar-question-input flex-center">
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Enter feature tag and press enter" />
+              <mat-label>Question</mat-label>
+              <input matInput placeholder="How to change user privileges" />
             </mat-form-field>
             <button mat-button>
               <img
@@ -293,7 +295,8 @@
 
           <div class="similar-question-input flex-center">
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Enter feature tag and press enter" />
+              <mat-label>Question</mat-label>
+              <input matInput placeholder="How to change user privileges" />
             </mat-form-field>
             <button mat-button>
               <img
@@ -305,7 +308,8 @@
 
           <div class="similar-question-input flex-center">
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Enter feature tag and press enter" />
+              <mat-label>Question</mat-label>
+              <input matInput placeholder="How to change user privileges" />
             </mat-form-field>
             <button mat-button>
               <img
@@ -317,7 +321,8 @@
 
           <div class="similar-question-input flex-center">
             <mat-form-field appearance="outline">
-              <input matInput placeholder="Enter feature tag and press enter" />
+              <mat-label>Question</mat-label>
+              <input matInput placeholder="How to change user privileges" />
             </mat-form-field>
             <button mat-button>
               <img
@@ -333,7 +338,9 @@
             <mat-panel-title>Bot Response</mat-panel-title>
           </mat-expansion-panel-header>
           <mat-tab-group>
-            <mat-tab label="Text"> Text </mat-tab>
+            <mat-tab label="Text"> 
+              <!-- <quill-editor></quill-editor> -->
+            </mat-tab>
             <mat-tab label="Cards"> Cards </mat-tab>
             <mat-tab label="Emoji"> Emoji </mat-tab>
           </mat-tab-group>
@@ -344,14 +351,15 @@
             <mat-panel-title>Feature</mat-panel-title>
           </mat-expansion-panel-header>
           <mat-form-field appearance="outline">
+            <mat-label>Enter feature tag and press enter</mat-label>
             <input matInput placeholder="Enter feature tag and press enter" />
           </mat-form-field>
-          <mat-chip-list aria-label="Fish selection">
-            <mat-chip
+          <mat-chip-list>
+            <mat-chip class="mat-chip-primary"
               >Contact Details
               <mat-icon matChipRemove>cancel</mat-icon></mat-chip
             >
-            <mat-chip
+            <mat-chip class="mat-chip-primary"
               >Contact Details
               <mat-icon matChipRemove>cancel</mat-icon></mat-chip
             >
