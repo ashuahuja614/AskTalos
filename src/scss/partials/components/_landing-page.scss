@@ -308,10 +308,116 @@
       align-items: center;
       background-color: $c-ladning-primary-light;
       color: $c-white;
+      padding-top: 15px;
+      flex-wrap: 50%;
 
       &:nth-child(odd) {
         background-color: $c-landing-sky;
         color: $c-landing-dark-gray;
+      }
+    }
+
+    &-text {
+      padding: 30px;
+      font-size: 18px;
+
+      &-review {
+        margin-bottom: 2em;
+      }
+    }
+  }
+
+  &__footer {
+    background-image: linear-gradient(
+      -90deg,
+      $c-ladning-primary-dark,
+      $c-ladning-primary-light
+    );
+    color: $c-white;
+    
+    .landing-page__wrapper {
+      background-image: url("../../../assets/images/landing_footer_shape.png");
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: 38%;
+    }
+
+    &-top {
+      padding: 100px;
+      text-align: center;
+      max-width: 840px;
+      margin: auto;
+    }
+
+    &-heading {
+      font-size: 46px;
+      margin-bottom: 1em;
+    }
+
+    &-demo-form {
+      max-width: 80%;
+      margin: auto;
+      display: flex;
+
+      input {
+        border: 1px solid rgba($c-white, 0.2);
+        background-color: transparent;
+        padding: 15px;
+        border-radius: 8px;
+        color: $c-white;
+        outline: none;
+        margin-right: 20px;
+        font-size: 14px;
+        flex-grow: 1;
+
+        &::placeholder {
+          color: $c-white;
+        }
+      }
+    }
+
+    &-items {
+      display: flex;
+    }
+
+    &-item {
+      flex-basis: 20%;
+    }
+
+    &-menu-heading {
+      font-size: 18px;
+      margin-bottom: 1.8em;
+    }
+
+    &-menu {
+      list-style: none;
+
+      li {
+        margin-bottom: 15px;
+      }
+
+      &-link {
+        color: inherit;
+      }
+
+      &.menu--social-links {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &-copyrights {
+      padding: 50px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-right: 15px;
       }
     }
   }
