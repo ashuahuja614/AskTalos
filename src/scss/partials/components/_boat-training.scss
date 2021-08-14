@@ -1,3 +1,7 @@
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+
 .boat-training-section {
   padding: 30px;
 
@@ -61,7 +65,7 @@
     max-height: calc(100vh - 72px);
     overflow: auto;
 
-    @include scrollbar(0px)
+    @include scrollbar(0px);
   }
 
   &-header {
@@ -120,13 +124,23 @@
       margin-bottom: 20px;
     }
 
+    .mat-expansion-panel {
+      box-shadow: 0 0 10px rgba($c-black, 0.08) !important;
+      color: $c-gray;
+      border: 1px solid rgba($c-gray, 0.08) !important;
+    }
+
+    .mat-expansion-panel-header {
+      height: 56px;
+    }
+
     .mat-expansion-panel-header-title {
       font-size: 20px;
     }
 
     .similar-question-input {
       margin-bottom: 20px;
-      
+
       .mat-form-field-wrapper {
         margin: 0;
         padding-bottom: 0;
@@ -154,6 +168,11 @@
       max-width: 500px;
     }
 
+    .mat-tab-label {
+      font-weight: normal !important;
+      opacity: 1 !important;
+    }
+
     .mat-tab-label-active {
       background-color: rgba($c-secondary, 0.05);
       border-bottom: 1px solid $c-secondary;
@@ -166,6 +185,10 @@
 
     .mat-tab-body-wrapper {
       margin-top: 20px;
+    }
+
+    .mat-form-field-flex {
+      padding: 0 16px !important;
     }
   }
 }

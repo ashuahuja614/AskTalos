@@ -36,11 +36,11 @@
   }
 }
 
-.mat-slide-toggle {
+.inner-slide-toggle {
   height: 20px;
   line-height: 20px;
 
-  &-bar {
+  .mat-slide-toggle-bar {
     height: 20px !important;
     border-radius: 10px !important;
     background-color: $c-gray;
@@ -72,6 +72,24 @@
 
     .mat-ripple-element {
       background-color: $c-success;
+    }
+  }
+}
+
+.mat-slide-toggle {
+  &.color--primary {
+    &.mat-checked {
+      .mat-slide-toggle-bar {
+        background-color: $c-primary;
+      }
+
+      .mat-slide-toggle-thumb {
+        background-color: $c-white !important;
+      }
+    }
+
+    .mat-ripple-element {
+      background-color: $c-primary;
     }
   }
 }
@@ -114,4 +132,14 @@
 
 .mat-checkbox-frame {
   border: 1px solid rgba($c-gray, 0.4) !important;
+}
+
+.mat-chip-primary {
+  background-color: #0e496e !important;
+  color: #fff !important;
+
+  .mat-chip-remove {
+    color: #fff !important;
+    opacity: 1 !important;
+  }
 }

@@ -13,7 +13,6 @@ import { BotComponent } from './bot/bot.component';
 import { BotFlowChartComponent } from './bot-flow-chart/bot-flow-chart.component';
 import { CreateChildIntentPopupComponent } from './create-child-intent-popup/create-child-intent-popup.component';
 
-
 @NgModule({
   declarations: [
     AllBotsComponent,
@@ -29,7 +28,7 @@ import { CreateChildIntentPopupComponent } from './create-child-intent-popup/cre
   imports: [
     CommonModule,
     BotRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class BotModule { }
