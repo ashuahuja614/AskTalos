@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { QuillModule } from 'ngx-quill'
+import { QuillModule } from 'ngx-quill';
+
+import Counter from './counter';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,16 @@ import { QuillModule } from 'ngx-quill'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    QuillModule.forRoot()
+    QuillModule.forRoot({
+      customModules: [{
+        implementation: Counter,
+        path: 'modules/counter'
+      }],
+      customOptions: [{
+        import: 'formats/font',
+        whitelist: ['mirza', 'roboto', 'aref', 'serif', 'sansserif', 'monospace']
+      }]
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
+import 'quill-emoji/dist/quill-emoji.js'
+
+import Quill from 'quill';
+
+const parchment = Quill.import('parchment')
+const block = parchment.query('block')
+block.tagName = 'DIV'
+// or class NewBlock extends Block {} NewBlock.tagName = 'DIV'
+Quill.register(block /* or NewBlock */, true)
 
 @Component({
   selector: 'app-rich-text-editor',
@@ -6,35 +16,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rich-text-editor.component.scss']
 })
 export class RichTextEditorComponent implements OnInit {
+  @ViewChild('editor', {static: true}) editor: ElementRef;
 
-  public quillConfiguration = {};
+  modules = {}
 
   constructor() {
-    this.quillConfiguration = {
-      // 'emoji-shortname': true,
-      // 'emoji-textarea': true,
-      // 'emoji-toolbar': true,
-      'toolbar': [
-        ['blockquote', 'code-block', 'bold', 'italic', 'underline', 'emoji', 'strike', 'image', { 'list': 'ordered' }, { 'list': 'bullet' }, 'clean'],        // toggled buttons
-
-
-        // [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-
-        // [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-        // [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-        // [{ 'direction': 'rtl' }],                         // text direction
-
-        // [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-        // [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-        // [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-        // [{ 'font': [] }],
-        // [{ 'align': [] }],
-
-        // ['link', 'image', 'video'],                         // link and image, video
-
-
-      ]
+    this.modules = {
+      'emoji-shortname': false,
+      'emoji-textarea': false,
+      'emoji-toolbar': true,
+      'toolbar': { container:  ['blockquote', 'code-block', 'bold', 'italic', 'underline', 'emoji', 'strike', 'image', { 'list': 'ordered' }, { 'list': 'bullet' }, 'clean'], }
     }
    }
 
