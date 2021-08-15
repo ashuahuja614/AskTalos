@@ -8,6 +8,10 @@
     max-width: 1505px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @media screen and (max-width: 1600px) {
+      max-width: 1305px;
+    }
   }
 
   &__banner {
@@ -23,9 +27,17 @@
     &-inner {
       display: flex;
       align-items: center;
-      max-width: calc(1920px - (1920px - 1505px + 15px) / 2);
+      max-width: calc(100vw - ((100vw - 1505px) / 2 + 15px));
       margin-left: auto;
       padding: 0;
+
+      @media screen and (max-width: 1600px) {
+        max-width: calc(100vw - ((100vw - 1305px) / 2 + 15px));
+      }
+
+      @media screen and (min-width: 1920px) {
+        max-width: calc(1920px - ((1920px - 1505px) / 2 + 15px));
+      }
     }
 
     &-text {
@@ -38,11 +50,19 @@
       font-size: 46px;
       margin-bottom: 0.8em;
       font-weight: bold;
+
+      @media screen and (max-width: 1600px) {
+        font-size: 42px;
+      }
     }
 
     &-description {
       font-size: 18px;
       margin-bottom: 1em;
+
+      @media screen and (max-width: 1600px) {
+        font-size: 16px;
+      }
     }
 
     &-image {
@@ -125,6 +145,10 @@
         &:hover::after {
           width: 100%;
         }
+
+        @media screen and (max-width: 1600px) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -133,16 +157,27 @@
     font-size: 38px;
     margin-bottom: 0.7em;
     color: $c-dark;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 32px;
+    }
   }
 
   &__tagline {
     font-size: 18px;
     line-height: 1.8;
+    @media screen and (max-width: 1600px) {
+      font-size: 16px;
+    }
   }
 
   &__description {
     font-size: 16px;
     line-height: 2;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 14px;
+    }
   }
 
   &__explore-link {
@@ -154,6 +189,10 @@
 
     svg {
       margin-left: 8px;
+    }
+
+    @media screen and (max-width: 1600px) {
+      font-size: 16px;
     }
   }
 
@@ -340,10 +379,18 @@
       color: $c-gray;
       line-height: 1.5;
 
+      @media screen and (max-width: 1600px) {
+        font-size: 16px;
+      }
+
       &-heading {
         font-size: 18px;
         color: $c-gray;
         margin-bottom: 1em;
+
+        @media screen and (max-width: 1600px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -398,6 +445,10 @@
       p {
         font-size: 18px;
         margin-bottom: 30px;
+
+        @media screen and (max-width: 1600px) {
+          font-size: 16px;
+        }
       }
 
       button {
@@ -570,6 +621,7 @@
   &__testimonials {
     &-items {
       display: flex;
+      justify-content: center;
     }
 
     &-item {
@@ -592,6 +644,10 @@
 
       &-review {
         margin-bottom: 2em;
+      }
+
+      @media screen and (max-width: 1600px) {
+        font-size: 16px;
       }
     }
   }
@@ -621,6 +677,10 @@
     &-heading {
       font-size: 46px;
       margin-bottom: 1em;
+
+      @media screen and (max-width: 1600px) {
+        font-size: 42px;
+      }
     }
 
     &-demo-form {
@@ -642,6 +702,10 @@
         &::placeholder {
           color: $c-white;
         }
+
+        @media screen and (max-width: 1600px) {
+          font-size: 12px;
+        }
       }
     }
 
@@ -656,6 +720,10 @@
     &-menu-heading {
       font-size: 18px;
       margin-bottom: 1.8em;
+
+      @media screen and (max-width: 1600px) {
+        font-size: 16px;
+      }
     }
 
     &-menu {
